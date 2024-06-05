@@ -2,7 +2,8 @@
 A custom animation application utilizing HTML, CSS, and jQuery can create dynamic, visually engaging interactions on a webpage. HTML provides the structure, CSS handles the styling, and jQuery adds interactivity and animation effects. Elements can be animated to respond to user input, such as hovering over a button or scrolling down the page. With CSS transitions and animations, properties like color, size, position, and opacity can smoothly change over time. jQuery's `animate()` method allows for more complex animations, enabling movement, rotation, and scaling of elements. Together, these technologies empower developers to craft immersive and captivating user experiences on the web.
 <br>
 Add initial files
-
+<br>
+Add Preloader animation
 
 
 

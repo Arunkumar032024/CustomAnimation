@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 :root{
-    --robot-font: "Roboto", sans-serif;
+    --roboto-font: "Roboto", sans-serif;
 }

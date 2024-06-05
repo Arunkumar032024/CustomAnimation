@@ -1,0 +1,45 @@
+body{
+    text-align: center;
+    
+}
+.preloader{
+    width: 95%;
+    max-width: 576px;
+    margin: 2rem auto;
+    font-family: var(--roboto-font);
+}
+p{
+    text-align: justify;
+}
+
+.loader-container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader{
+    width: 60px;
+    height: 60px;
+    border: 5px solid;
+    border-top-color: transparent;
+    color: #03AED2;
+    border-radius: 50%;
+    animation: loader .5s linear 0s infinite ;
+}
+@keyframes loader {
+    25%{
+        color: #68D2E8;
+    }
+    50%{
+        color: #FDDE55;
+    }
+    75%{
+        color: #B51B75;
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
