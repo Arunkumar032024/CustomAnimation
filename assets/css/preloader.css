@@ -11,7 +11,21 @@ body{
 p{
     text-align: justify;
 }
-
+.btn{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: var(--font-sm);
+    background-color: #B51B75;
+    color: #FDDE55;
+    font-weight: bold;
+    padding: 0.413rem 0.813rem;
+    display: block;
+    width: fit-content;
+    margin: 1rem auto;
+}
+.btn:hover{
+    filter: brightness(1.1);
+}
 .loader-container{
     width: 100%;
     min-height: 100vh;
