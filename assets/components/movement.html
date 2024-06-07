@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movement Animation</title>
+    <!-- to add favicon -->
+    <link rel="shortcut icon" href="../icons/favicon.ico" type="image/x-icon">
+    <!-- add fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- jquery cdn  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+        }
+
+        .container {
+            width: 100vw;
+            height: 85vh;
+            background-color: red;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        #movementImg {
+            position: absolute;
+            border: 5px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <img src="../images/movement.gif" alt="" id="movementImg">
+    </main>
+    <a href="../../index.html">Back to Home</a>
+    <script>
+        $(document).ready(function () {
+            let width = $(".container").width() - 150;
+            let height = $(".container").height();
+            const obj = $("#movementImg");
+            let move;
+            do {
+                move = false
+                console.log('start')
+                if (width >= -80) {
+                    obj.animate({
+                        "left": width + "px"
+                    })
+                    move = true;
+                } else {
+                    if (height >= -80) {
+                        obj.animate({
+                            "bottom": height + "px"
+                        })
+                        move = true;
+                    }
+                    height -= 10;
+                }
+                width -= 10;
+            } while (move)
+        })
+    </script>
+</body>
+
+</html>

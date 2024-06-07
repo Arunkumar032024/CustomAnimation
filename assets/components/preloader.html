@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloader Animation</title>
+    <!-- to add favicon -->
+    <link rel="shortcut icon" href="../icons/favicon.ico" type="image/x-icon">
+    <!-- add fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- jquery cdn  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        body {
+            text-align: center;
+
+        }
+
+        .preloader {
+            width: 95%;
+            max-width: 576px;
+            margin: 2rem auto;
+            font-family: var(--roboto-font);
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .btn {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: var(--font-sm);
+            background-color: #B51B75;
+            color: #FDDE55;
+            font-weight: bold;
+            padding: 0.413rem 0.813rem;
+            display: block;
+            width: fit-content;
+            margin: 1rem auto;
+        }
+
+        .btn:hover {
+            filter: brightness(1.1);
+        }
+
+        .loader-container {
+            width: 100%;
+            min-height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 5px solid;
+            border-top-color: transparent;
+            color: #03AED2;
+            border-radius: 50%;
+            animation: loader .5s linear 0s infinite;
+        }
+
+        @keyframes loader {
+            25% {
+                color: #68D2E8;
+            }
+
+            50% {
+                color: #FDDE55;
+            }
+
+            75% {
+                color: #B51B75;
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <main class="preloader">
+        <h1>Preloader Animation Effect</h1>
+        <img src="../images/preloader.jpg" alt="laptop images here">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum inventore voluptas sit ut voluptates ab saepe
+            similique voluptatibus tenetur laboriosam harum, dolorum quibusdam ea alias quam, eligendi cumque quis in
+            sunt nam quisquam numquam accusantium doloremque repudiandae? Pariatur ab mollitia quia molestias, quis,
+            incidunt dicta, ratione officiis doloremque ipsum magni blanditiis tempore libero expedita laborum qui
+            placeat omnis possimus? Provident ab placeat odio pariatur dolorum. Quidem, vitae eius? Quas quos error iure
+            excepturi eaque autem deserunt optio, laborum saepe tempore laudantium omnis ipsum neque, dolorem ducimus,
+            totam nemo odit ut cupiditate exercitationem! Voluptate autem aperiam est aut possimus voluptates pariatur.
+        </p>
+        <a class="btn" href="../../index.html">Back To Home</a>
+    </main>
+
+    <!-- script -->
+    <script>
+        $(window).on("load", function () {
+            $(".loader-container").fadeOut(1500);
+        })
+
+    </script>
+</body>
+
+</html>
