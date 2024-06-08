@@ -13,58 +13,38 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!-- stylesheet -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- <link rel="stylesheet" href="assets/css/custom.css"> -->
     <style>
         body {
-            text-align: center;
             margin: 0;
+            text-align: right;
         }
-
-        .container {
-            width: 100vw;
-            height: 85vh;
-            background-color: red;
-            margin-bottom: 1rem;
-            position: relative;
-        }
-
-        #movementImg {
-            position: absolute;
-            border: 5px solid #fff;
+        div{
+            margin-top: 2rem;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <main class="container">
-        <img src="../images/movement.gif" alt="" id="movementImg">
-    </main>
-    <a href="../../index.html">Back to Home</a>
-    <script>
+        <img src="../images/movement.gif" alt="" id="movementImg"><br>
+        <div><a href="../../index.html">Back to Home</a></div>
+    <script >
         $(document).ready(function () {
-            let width = $(".container").width() - 150;
-            let height = $(".container").height();
-            const obj = $("#movementImg");
-            let move;
-            do {
-                move = false
-                console.log('start')
-                if (width >= -80) {
-                    obj.animate({
-                        "left": width + "px"
-                    })
-                    move = true;
-                } else {
-                    if (height >= -80) {
-                        obj.animate({
-                            "bottom": height + "px"
-                        })
-                        move = true;
-                    }
-                    height -= 10;
-                }
-                width -= 10;
-            } while (move)
+            
+            let w = $(window).width()
+            console.log(w)
+            
+            
+            let mr = 0;
+            do{
+                $("#movementImg").animate({
+                    "margin-right": mr + "px"
+                });
+                mr+=50
+            }while(mr < w);
+            
+            
         })
     </script>
 </body>
